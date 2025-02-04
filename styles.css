@@ -1,0 +1,194 @@
+/* Import custom Harry Potter font if the CDN fails */
+@font-face {
+    font-family: 'Harry Potter';
+    src: url('harry-potter.woff2') format('woff2');
+}
+
+body {
+    font-family: 'Times New Roman', serif;
+    background: #2c3e50 url('hogwarts-bg.jpg') center/cover fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    color: #2c3e50;
+}
+
+.magical-border {
+    background: url('parchment-bg.jpg') center/cover;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+    position: relative;
+    max-width: 800px;
+    width: 90%;
+}
+
+.magical-border::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 2px solid #c4a747;
+    border-radius: 18px;
+    pointer-events: none;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 3rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-family: 'Harry Potter', fantasy;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-family: 'Harry Potter', fantasy;
+    font-size: 2rem;
+    margin: 1.5rem 0;
+}
+
+.magical-button {
+    font-family: 'Times New Roman', serif;
+    background: linear-gradient(45deg, #c4a747, #deb853);
+    color: #2c3e50;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 10px auto;
+    display: inline-block;
+}
+
+.magical-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #deb853, #e6cc7a);
+}
+
+.magical-text {
+    font-family: 'Harry Potter', fantasy;
+    font-size: 3.5rem;
+    margin: 1.5rem 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.description-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 1.5rem auto;
+    max-width: 600px;
+    font-style: italic;
+}
+
+.sorting-hat {
+    width: 180px;
+    margin: 20px auto;
+    transition: transform 0.5s;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+}
+
+.sorting-hat.thinking {
+    animation: bounce 1s infinite;
+}
+
+.house-crest {
+    width: 200px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.house-crest:hover {
+    transform: scale(1.05);
+}
+
+/* House-specific colors with gradients */
+.gryffindor { 
+    background: linear-gradient(45deg, #740001, #ae0001);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.slytherin { 
+    background: linear-gradient(45deg, #1a472a, #2a623d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hufflepuff { 
+    background: linear-gradient(45deg, #ecb939, #f0c75e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ravenclaw { 
+    background: linear-gradient(45deg, #0e1a40, #222f5b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Animation keyframes */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .container {
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .magical-text {
+        font-size: 2.5rem;
+    }
+    
+    .magical-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+#sort-again {
+    background-color: #2ecc71;
+    margin-top: 20px;
+}
+
+#sort-again:hover {
+    background-color: #27ae60;
+} 

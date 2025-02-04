@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogwarts Sorting Hat</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+</head>
+<body>
+    <div class="magical-border">
+        <div class="container">
+            <h1>The Sorting Ceremony</h1>
+            <img src="sorting-hat.png" alt="Sorting Hat" id="sorting-hat" class="sorting-hat">
+            <div id="result" class="hidden">
+                <h2>You belong in...</h2>
+                <p id="house-name" class="magical-text"></p>
+                <img id="house-crest" class="house-crest" src="" alt="House Crest">
+                <p id="house-description" class="description-text"></p>
+                <button id="sort-again" class="magical-button hidden">Sort Again!</button>
+            </div>
+            <button id="sort-button" class="magical-button">Place the Sorting Hat upon your head</button>
+        </div>
+    </div>
+    <audio id="sorting-sound" src="sorting-sound.mp3"></audio>
+    <audio id="result-sound" src="result-sound.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html> 
